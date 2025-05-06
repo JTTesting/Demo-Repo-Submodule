@@ -19,8 +19,10 @@ jobs:
     runs-on: windows-2019
 
     steps:
-      - name: Checkout code
+      - name: Checkout code (with Submodules)
         uses: actions/checkout@v4
+        with:
+          submodules: true
 
       - name: Set up cache for build
         uses: actions/cache@v3
